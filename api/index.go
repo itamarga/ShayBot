@@ -8,5 +8,5 @@ import (
 
 func Handler(w http.ResponseWriter, r *http.Request) {
 	t := time.Now()
-	fmt.Fprintf(w, "<h1>The time is: </h1>", t)
+	fmt.Fprintf(w, "<h1>The time is: ", t.Format(time.RFC3339), "</h1>")
 }
