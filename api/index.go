@@ -1,10 +1,12 @@
 package handler
 
 import (
-  "fmt"
-  "net/http"
+	"fmt"
+	"net/http"
+	"time"
 )
 
 func Handler(w http.ResponseWriter, r *http.Request) {
-  fmt.Fprintf(w, "<h1>Hello from Go on Now!</h1>")
+	t := time.Now
+	fmt.Fprintf(w, "<h1>The time is: </h1>", t)
 }
